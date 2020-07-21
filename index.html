@@ -30,9 +30,14 @@
 
   // option 1
 
-  // const array2 = [1, 2, 3, 4, 5];
-  // const arraySum = array2.reduce(function(a,b){
-  //         return a + b
+  // const array = [1, 2, 3, 4, 5];
+  // const arraySum = array.reduce(function(a,b){
+  //   return a + b
+  // }, 0);
+
+  // const array = [1, 2, 3, 4, 5];
+  // const arraySum = array.reduce(function(a,b) {
+  //   return a + b
   // }, 0);
 
   // console.log(arraySum);
@@ -43,6 +48,18 @@
   // const arraySum = array.reduce((a,b) => a + b, 0)
 
   // console.log(arraySum);
+
+
+  // option 3
+
+  const array = [1, 2, 3, 4, 5];
+  let sum = 0;
+  for(let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  console.log('The sum is ' + sum);
+
+  // console.log(sum/array.length);
 
 </script>
 
