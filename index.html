@@ -7,8 +7,34 @@
 <body>
 
 <script>
+  const array = [1, 2, 3, 4, 5];
+  
 
 
+
+
+  // use the reduce() method
+  // calculate the sum of an array of numbers
+  // reduce() method executes the specified reducer function on each member of the array resulting in a single output value
+
+  // the 0 is the initialValue - the value to use as the first argument to the first call of the callback
+  // if no initial value is supplied, the first element in the array will be used
+  // if the array is empty and no initialValue is provided, an error will be thrown
+  // safer to provide an initial value like 0
+
+  // option 1
+  const array = [1, 2, 3, 4, 5];
+  const arraySum = array.reduce(function(a,b){
+          return a + b
+  }, 0);
+
+  console.log(arraySum);
+
+  // option 2 
+  const array = [1, 2, 3, 4, 5];
+  const arraySum = array.reduce((a,b) => a + b, 0)
+
+  console.log(arraySum);
 
 </script>
 
