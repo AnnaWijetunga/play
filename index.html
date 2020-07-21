@@ -7,8 +7,16 @@
 <body>
 
 <script>
-  const array = [1, 2, 3, 4, 5];
-  
+  const array1 = [1, 2, 3, 4];
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+  // 1 + 2 + 3 + 4
+  console.log(array1.reduce(reducer));
+  // expected output: 10
+
+  // 5 + 1 + 2 + 3 + 4
+  console.log(array1.reduce(reducer, 5));
+  // expected output: 15
 
 
 
@@ -23,18 +31,20 @@
   // safer to provide an initial value like 0
 
   // option 1
-  const array = [1, 2, 3, 4, 5];
-  const arraySum = array.reduce(function(a,b){
-          return a + b
-  }, 0);
 
-  console.log(arraySum);
+  // const array2 = [1, 2, 3, 4, 5];
+  // const arraySum = array2.reduce(function(a,b){
+  //         return a + b
+  // }, 0);
+
+  // console.log(arraySum);
 
   // option 2 
-  const array = [1, 2, 3, 4, 5];
-  const arraySum = array.reduce((a,b) => a + b, 0)
 
-  console.log(arraySum);
+  // const array3 = [1, 2, 3, 4, 5, 6];
+  // const arraySum = array.reduce((a,b) => a + b, 0)
+
+  // console.log(arraySum);
 
 </script>
 
