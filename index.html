@@ -52,12 +52,40 @@
 
   // option 3
 
-  const array = [1, 2, 3, 4, 5];
+  // const array = [1, 2, 3, 4, 5];
+  // let sum = 0;
+  // for(let i = 0; i < array.length; i++) {
+  //   sum += array[i];
+  // }
+  // console.log('The sum is ' + sum);
+
+  // const array = [1, 2, 3, 4, 5];
+
+  // let sum = 0; // sets initial value
+  // for(let i = 0; i < array.length; i++) {
+  //   sum += array[i]
+  // };
+
+  // console.log('The sum is ' + sum);
+  
+  // standard way - using a for loop
+  // declare the variable sum, set its initial value of 0
+  // use a standard for loop to iterate through our array of numbers and total up the array using sum
+  // simple, not the best solution
+  // we introduce mutation into our code
+  // we created the variable sum whose value is changed at a later point
+  // bad for readability and more error prone
+  const numbers = [2, 4, 7, 5];
   let sum = 0;
-  for(let i = 0; i < array.length; i++) {
-    sum += array[i];
-  }
-  console.log('The sum is ' + sum);
+
+  function sumArray() {
+    for (let i = 0; i < numbers.length; i++);
+    sum += numbers[i];
+  };
+
+  console.log(sumArray);
+
+
 
   // console.log(sum/array.length);
 
