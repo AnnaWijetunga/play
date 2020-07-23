@@ -75,19 +75,39 @@
   // we introduce mutation into our code
   // we created the variable sum whose value is changed at a later point
   // bad for readability and more error prone
-  const numbers = [2, 4, 7, 5];
-  let sum = 0;
 
-  function sumArray() {
-    for (let i = 0; i < numbers.length; i++);
-    sum += numbers[i];
-  };
+  // const numbers = [2, 4, 7, 5];
+  // let sum = 0;
 
-  console.log(sumArray);
+  // for (let i = 0; i < numbers.length; i++) {
+  //   sum += numbers[i]
+  // };
 
+  // console.log('The sum is ' + sum);
 
+  // immutable code
+  // the better option
+
+  // const numbers = [10, 20, 30, 40];
+  // // function called add; takes 2 numbers and adds them
+  // const add = (a,b) => a + b
+
+  // // use reduce to sum our array
+  // const sum = numbers.reduce(add)
+  
+  // console.log(sum)
+
+  const numbers = [1, 2, 3, 4];
+
+  const add = (a, b) => a + b;
+
+  
+  
 
   // console.log(sum/array.length);
+
+  // love this explanation:
+  // https://medium.com/@chrisburgin95/rewriting-javascript-sum-an-array-dbf838996ed0
 
 </script>
 
