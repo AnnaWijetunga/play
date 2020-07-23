@@ -105,7 +105,8 @@
     return a + b
   };
 
-  
+  const sum = numbers.reduce(add);
+
 
   
 
@@ -114,6 +115,15 @@
   // love this explanation:
   // https://medium.com/@chrisburgin95/rewriting-javascript-sum-an-array-dbf838996ed0
 
+
+  // arrow function
+  // ES5
+  var add = function(x, y) {
+    return x + y;
+  };
+  // ES6
+  let add = (x, y) => { return x + y };
+  
 </script>
 
 </body>
