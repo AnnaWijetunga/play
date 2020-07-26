@@ -113,31 +113,81 @@
 
   // BREAK
   // return the array, but with each name capitalized
-  names = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
-  let capitalized = [];
-  // function
+  // const names = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
+  // let capitalized = [];
+  // // function
 
-  console.log(capitalized);
+  // console.log(capitalized);
 
   // first let's try a string
-  let string = "anna"
-  // get the first letter
-  string.charAt(0); // returns "a"
-  // convert first letter to uppercase
-  string.charAt(0).toUpperCase(); // returns "A"
-  // get rest of string
-  string.slice(1); // returns "nna"
-  // return the result adding the first letter and rest of string
-  function capitalizeFirstLetter(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+  // let string = "anna"
+  // // get the first letter
+  // string.charAt(0); // returns "a"
+  // // convert first letter to uppercase
+  // string.charAt(0).toUpperCase(); // returns "A"
+  // // get rest of string
+  // string.slice(1); // returns "nna"
+  // // return the result adding the first letter and rest of string
+  // function capitalizeFirstLetter(str) {
+  //   return str.charAt(0).toUpperCase() + str.slice(1);
+  // }
+
+  // // https://www.freecodecamp.org/news/how-to-capitalize-the-first-letter-of-a-string-in-javascript/
+
+  // capitalizeFirstLetter(string); // returns "Anna"
+
+  // uppercase first letter of each string
+  // const str = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
+  // function titleCase(str) {
+  //    str = str.split(' ');
+  //    for (var i = 0; i < str.length; i++) {
+  //        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+  //    }
+  //    return str;
+  //  };
+
+  //  console.log(str);
+  
+  function titleCase(str) {
+    var wordArray = str.toLowerCase().split(' '); // changes string to all lower case and separates string into array of words
+    // console.log(stringArray);
+    var charArray = []; // creates array to be nested in upcoming loop
+  
+    for (i = 0; i < wordArray.length; i++) {
+      charArray = wordArray[i].split(''); // creates nested array of individual characters
+      // console.log(charArray[0].toUpperCase());
+      charArray[0] = charArray[0].toUpperCase(); // changes first value of each nested array to upper case character
+      // console.log(charArray.join(''));
+      wordArray[i] = charArray.join(''); // joins nested character array back into word array
+    }
+  
+  str = wordArray.join(' '); // joins word array back into string, with spaces separating each word
+  
+  // console.log(str);
+  return str;
   }
 
-  // https://www.freecodecamp.org/news/how-to-capitalize-the-first-letter-of-a-string-in-javascript/
-
-  capitalizeFirstLetter(string); // returns "Anna"
+  titleCase("I'm a little tea pot");  
 
 
+  function titleCase(str) {
+    var wordsArray = str.toLowerCase().split(" ");
 
+    // var charsArray = [];
+
+    for (i = 0; i < wordsArray.length; i++) {
+      charsArray = wordsArray[i].split("");
+      charsArray[0] = charsArray[0].toUpperCase();
+      wordsArray[i] = charsArray.join("");
+    }
+
+    str = wordsArray.join(" ");
+    return str;
+  }
+
+  titleCase("I’m a little tea pot");
+
+  console.log(titleCase("I'm a little tea pot"));
 
 </script>
 
