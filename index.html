@@ -42,16 +42,17 @@
 
   // console.log(sum);
 
-  const numbers = [1, 2, 3, 4, 5, 6]; // array of numbers
-  let sum = 0; // declare variable sum, set initial value of 0
+  // // OPTION 3 long explanation
+  // const numbers = [1, 2, 3, 4, 5, 6]; // array of numbers
+  // let sum = 0; // declare variable sum, set initial value of 0
 
-  // loop or iterate over each number in the array in order to add
-  for (let i = 0; i < numbers.length; i++) { // initialization, to be evaluated once before the loop begins; condition, evaluated before each loop interation - if true, execute statement; final-expression, increment the counter variable
-    sum += numbers[i];
-    // sum = sum + numbers[i]; alternative way to write the above
-  };
+  // // loop or iterate over each number in the array in order to add
+  // for (let i = 0; i < numbers.length; i++) { // initialization, to be evaluated once before the loop begins; condition, evaluated before each loop interation - if true, execute statement; final-expression, increment the counter variable
+  //   sum += numbers[i];
+  //   // sum = sum + numbers[i]; alternative way to write the above
+  // };
 
-  console.log(sum);
+  // console.log(sum);
 
   // 1. declare the variable sum, set its initial value of 0
   // 2. INITIALIZATION (let i = 0): an expression or variable declaration evaluated once before the loop begins - used to initialize a counter variable
@@ -65,31 +66,23 @@
   // we created the variable sum whose value is changed at a later point
   // bad for readability and more error prone
 
-  // const numbers = [2, 4, 7, 5];
-  // let sum = 0;
-
-  // for (let i = 0; i < numbers.length; i++) {
-  //   sum += numbers[i]
-  // };
-
-  // console.log('The sum is ' + sum);
-
+  // OPTION 3 - expansion
   // immutable code
   // the better option
 
-  // const numbers = [10, 20, 30, 40]
-  // const add = (a, b) => a + b;
+  const numbers = [10, 20, 30, 40]
+  const add = (a, b) => a + b;
 
-  // const sum = numbers.reduce(add);
+  const sum = numbers.reduce(add);
 
-  // const numbers = [10, 20, 30, 40];
-  // // function called add; takes 2 numbers and adds them
-  // const add = (a,b) => a + b
+  const numbers = [10, 20, 30, 40];
+  // function called add; takes 2 numbers and adds them
+  const add = (a,b) => a + b
 
-  // // use reduce to sum our array
-  // const sum = numbers.reduce(add)
+  // use reduce to sum our array
+  const sum = numbers.reduce(add)
   
-  // console.log(sum)
+  console.log(sum)
 
   // const numbers = [1, 2, 3, 4];
 
