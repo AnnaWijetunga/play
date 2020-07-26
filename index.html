@@ -112,6 +112,30 @@
   console.log(sum);
 
   // BREAK
+  // return the array, but with each name capitalized
+  names = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
+  let capitalized = [];
+  // function
+
+  console.log(capitalized);
+
+  // first let's try a string
+  let string = "anna"
+  // get the first letter
+  string.charAt(0); // returns "a"
+  // convert first letter to uppercase
+  string.charAt(0).toUpperCase(); // returns "A"
+  // get rest of string
+  string.slice(1); // returns "nna"
+  // return the result adding the first letter and rest of string
+  function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
+  // https://www.freecodecamp.org/news/how-to-capitalize-the-first-letter-of-a-string-in-javascript/
+
+  capitalizeFirstLetter(string); // returns "Anna"
+
 
 
 
