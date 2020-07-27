@@ -169,26 +169,40 @@
 
   // titleCase("I'm a little tea pot");  
 
+  // function titleCase(str) {
+  //   var wordsArray = str.toLowerCase().split(" ");
 
-  function titleCase(str) {
-    var wordsArray = str.toLowerCase().split(" ");
+  //   var charsArray = [];
 
+  //   for (i = 0; i < wordsArray.length; i++) {
+  //     charsArray = wordsArray[i].split("");
+  //     charsArray[0] = charsArray[0].toUpperCase();
+  //     wordsArray[i] = charsArray.join("");
+  //   }
+
+  //   str = wordsArray.join(" ");
+  //   return str;
+  // }
+
+  // console.log(titleCase("I'm a little tea pot"));
+
+  const names = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
+
+  function titleCase(names) {
+    // var wordsArray = str.toLowerCase().split(" ");
+  
     // var charsArray = [];
 
-    for (i = 0; i < wordsArray.length; i++) {
-      charsArray = wordsArray[i].split("");
+    for (i = 0; i < names.length; i++) {
+      charsArray = names[i].split('');
       charsArray[0] = charsArray[0].toUpperCase();
-      wordsArray[i] = charsArray.join("");
+      names[i] = charsArray.join('');
     }
-
-    str = wordsArray.join(" ");
-    return str;
+    // str = wordsArray.join(" ");
+    return names;
   }
 
-  titleCase("I’m a little tea pot");
-
-  console.log(titleCase("I'm a little tea pot"));
-
+  console.log(titleCase(names));
 </script>
 
 </body>
