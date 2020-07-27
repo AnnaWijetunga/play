@@ -192,21 +192,26 @@
 
   const names = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
 
-  function titleCase(names) {
-    let wordsArray = str.toLowerCase().split(" ");
+  function titleCase(str) {
+    var wordArray = str.toLowerCase().split(' '); // changes string to all lower case and separates string into array of words
+    // console.log(stringArray);
+    var charArray = []; // creates array to be nested in upcoming loop
   
-    let charsArray = [];
-
-    for (i = 0; i < names.length; i++) {
-      charsArray = names[i].split('');
-      charsArray[0] = charsArray[0].toUpperCase();
-      names[i] = charsArray.join('');
+    for (i = 0; i < wordArray.length; i++) {
+      charArray = wordArray[i].split(''); // creates nested array of individual characters
+      // console.log(charArray[0].toUpperCase());
+      charArray[0] = charArray[0].toUpperCase(); // changes first value of each nested array to upper case character
+      // console.log(charArray.join(''));
+      wordArray[i] = charArray.join(''); // joins nested character array back into word array
     }
-    // str = wordsArray.join(" ");
-    return names;
+  
+    str = wordArray.join(' '); // joins word array back into string, with spaces separating each word
+  
+    // console.log(str);
+    return str;
   }
 
-  console.log(titleCase(names));
+  console.log(titleCase("I'm a little tea pot"));
 
 </script>
 
