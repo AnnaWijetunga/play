@@ -34,8 +34,9 @@
 
   // OPTION 3 - for loop
 
-  // const array = [1, 2, 3, 4, 5];
-  // let sum = 0;
+  const array = [1, 2, 3, 4, 5];
+  let sum = 0;
+
   // for (let i = 0; i < array.length; i++) {
   //   sum += array[i];
   // }
@@ -134,84 +135,27 @@
 
   // // https://www.freecodecamp.org/news/how-to-capitalize-the-first-letter-of-a-string-in-javascript/
 
-  // capitalizeFirstLetter(string); // returns "Anna"
 
-  // uppercase first letter of each string
-  // const str = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
-  // function titleCase(str) {
-  //    str = str.split(' ');
-  //    for (var i = 0; i < str.length; i++) {
-  //        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-  //    }
-  //    return str;
-  //  };
+const names = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
+  // unCapFirst() function to capitalize a name
 
-  //  console.log(str);
-  
-  // function titleCase(str) {
-  //   var wordArray = str.toLowerCase().split(' '); // changes string to all lower case and separates string into array of words
-  //   // console.log(stringArray);
-  //   var charArray = []; // creates array to be nested in upcoming loop
-  
-  //   for (i = 0; i < wordArray.length; i++) {
-  //     charArray = wordArray[i].split(''); // creates nested array of individual characters
-  //     // console.log(charArray[0].toUpperCase());
-  //     charArray[0] = charArray[0].toUpperCase(); // changes first value of each nested array to upper case character
-  //     // console.log(charArray.join(''));
-  //     wordArray[i] = charArray.join(''); // joins nested character array back into word array
-  //   }
-  
-  // str = wordArray.join(' '); // joins word array back into string, with spaces separating each word
-  
-  // // console.log(str);
-  // return str;
-  // }
+let capitalized = [];
 
-  // titleCase("I'm a little tea pot");  
-
-  // function titleCase(str) {
-  //   var wordsArray = str.toLowerCase().split(" ");
-
-  //   var charsArray = [];
-
-  //   for (i = 0; i < wordsArray.length; i++) {
-  //     charsArray = wordsArray[i].split("");
-  //     charsArray[0] = charsArray[0].toUpperCase();
-  //     wordsArray[i] = charsArray.join("");
-  //   }
-
-  //   str = wordsArray.join(" ");
-  //   return str;
-  // }
-
-  // console.log(titleCase("I'm a little tea pot"));
-
-  // Split these words in to arrays of letters, so they become nested arrays of the stringArray (wordArray)
-  // Upper case the first letter of each word based on its index in wordArray.
-  // Join the words back together, now with the first letter capitalized.
-
-  const names = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
-
-  function titleCase(str) {
-    var wordArray = str.toLowerCase().split(' '); // changes string to all lower case and separates string into array of words
-    // console.log(stringArray);
-    var charArray = []; // creates array to be nested in upcoming loop
-  
-    for (i = 0; i < wordArray.length; i++) {
-      charArray = wordArray[i].split(''); // creates nested array of individual characters
-      // console.log(charArray[0].toUpperCase());
-      charArray[0] = charArray[0].toUpperCase(); // changes first value of each nested array to upper case character
-      // console.log(charArray.join(''));
-      wordArray[i] = charArray.join(''); // joins nested character array back into word array
+function uncapNestedNames(names) {
+  arr.forEach(names => {
+    if(is_array(name)) {
+      names[i] = uncapNestedNames(name);
     }
-  
-    str = wordArray.join(' '); // joins word array back into string, with spaces separating each word
-  
-    // console.log(str);
-    return str;
-  }
+    else {
+      names[i] = unCapFirst(name);
+    }
+  });
+  return names;
+}
 
-  console.log(titleCase("I'm a little tea pot"));
+let capitalized = uncapNestedNames(names)
+
+console.log(uncapNestedNames(names));
 
 </script>
 
