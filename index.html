@@ -186,12 +186,16 @@
 
   // console.log(titleCase("I'm a little tea pot"));
 
+  // Split these words in to arrays of letters, so they become nested arrays of the stringArray (wordArray)
+  // Upper case the first letter of each word based on its index in wordArray.
+  // Join the words back together, now with the first letter capitalized.
+
   const names = ['anna', ['sachith', ['leon', ['betty', ['kat']]]]]
 
   function titleCase(names) {
-    // var wordsArray = str.toLowerCase().split(" ");
+    let wordsArray = str.toLowerCase().split(" ");
   
-    // var charsArray = [];
+    let charsArray = [];
 
     for (i = 0; i < names.length; i++) {
       charsArray = names[i].split('');
@@ -203,6 +207,7 @@
   }
 
   console.log(titleCase(names));
+
 </script>
 
 </body>
